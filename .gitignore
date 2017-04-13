@@ -5,5 +5,5 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 /el-get
-/idp.last
+/ido.last
 /tramp
