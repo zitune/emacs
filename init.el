@@ -22,6 +22,7 @@
 
 ;; languages
 (el-get-bundle lua-mode)
+(show-paren-mode)
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 
 ;; backup saves
@@ -65,12 +66,17 @@
 (menu-bar-mode -99)
 (tool-bar-mode -1)
 (scroll-bar-mode 0)
+(set-face-attribute 'vertical-border nil :foreground "#222222")
+(set-face-background 'fringe "#000000")
 (set-face-attribute 'default nil :height 70)
-(setq column-number-mode t)
-(global-linum-mode)
-(global-hl-line-mode 1)
-(show-paren-mode)
 (setq-default show-trailing-whitespace t)
+
+;; highlight line number
+(el-get-bundle tom-tan/hlinum-mode)
+(global-linum-mode)
+(setq linum-format "%4d ")
+(hlinum-activate)
+(global-hl-line-mode 1)
 
 ;; better status bar
 (el-get-bundle powerline)
