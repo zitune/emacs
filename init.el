@@ -22,6 +22,9 @@
 
 ;; languages
 (el-get-bundle apache-mode)
+(el-get-bundle crontab-mode)
+(el-get-bundle debian-changelog-mode)
+(el-get-bundle dockerfile-mode)
 (el-get-bundle json-mode)
 (el-get-bundle lua-mode)
 (el-get-bundle csv-mode)
