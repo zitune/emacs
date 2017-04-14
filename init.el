@@ -21,7 +21,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; languages
+(el-get-bundle apache-mode)
+(el-get-bundle json-mode)
 (el-get-bundle lua-mode)
+(el-get-bundle csv-mode)
 (show-paren-mode)
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 
@@ -68,8 +71,13 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (global-set-key (kbd "<M-RET>") 'company-complete)
 
+;; zoom current window
+(el-get-bundle zoom-window)
+(global-set-key "\C-xz" 'zoom-window-zoom)
+
 ;; theme
 (el-get-bundle color-theme-ir-black (color-theme-ir-black))
+(setq frame-title-format '(buffer-file-name "%f" ("%b")))
 (menu-bar-mode -99)
 (tool-bar-mode -1)
 (scroll-bar-mode 0)
