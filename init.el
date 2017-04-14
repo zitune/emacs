@@ -39,6 +39,9 @@
 (nav-disable-overeager-window-splitting)
 (global-set-key "\C-o" 'nav-toggle)
 
+;; shortkeys to switch between windows
+(el-get-bundle windcycle)
+
 ;; file finder
 (el-get-bundle find-file-in-project)
 (autoload 'find-file-in-project "find-file-in-project" nil t)
@@ -55,6 +58,10 @@
 (ido-mode 1)
 (ido-everywhere 1)
 (ido-ubiquitous-mode 1)
+
+;; smex
+(el-get-bundle smex)
+(global-set-key (kbd "M-x") 'smex)
 
 ;; completion
 (el-get-bundle company-mode)
@@ -86,9 +93,5 @@
 (el-get-bundle fill-column-indicator)
 (setq fci-rule-column 80)
 
-;; keys
+;; never kill emacs
 (global-set-key "\C-x\C-c" 'kill-this-buffer)
-(global-set-key (kbd "<M-up>") 'windmove-up)
-(global-set-key (kbd "<M-down>") 'windmove-down)
-(global-set-key (kbd "<M-left>") 'windmove-left)
-(global-set-key (kbd "<M-right>") 'windmove-right)
