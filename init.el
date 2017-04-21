@@ -37,6 +37,7 @@
 (add-hook 'after-save-hook 'backup-each-save)
 (setq backup-each-save-mirror-location "~/.emacs.backups")
 (setq make-backup-files nil)
+(setq backup-each-save-remote-files t)
 
 ;; better file management
 (el-get-bundle nav)
@@ -88,6 +89,7 @@
 (set-face-background 'fringe "#000000")
 (set-face-attribute 'default nil :height 70)
 (setq-default show-trailing-whitespace t)
+(set-frame-font "6x13")
 
 ;; highlight line number
 (el-get-bundle tom-tan/hlinum-mode)
@@ -106,3 +108,4 @@
 
 ;; never kill emacs
 (global-set-key "\C-x\C-c" 'kill-this-buffer)
+
