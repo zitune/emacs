@@ -3,6 +3,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; install (if needed) and load
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -109,3 +116,8 @@
 ;; never kill emacs
 (global-set-key "\C-x\C-c" 'kill-this-buffer)
 
+;; no hardtab
+(setq-default indent-tabs-mode nil)
+
+;;DNS MODE
+ (add-to-list 'auto-mode-alist '("/home/zitune/dev/bearstech/infra/service/dns/master/zones/" . dns-mode))
