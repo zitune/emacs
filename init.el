@@ -121,3 +121,8 @@
 
 ;;DNS MODE
  (add-to-list 'auto-mode-alist '("/home/zitune/dev/bearstech/infra/service/dns/master/zones/" . dns-mode))
+
+;;ctrl-z
+(global-unset-key (kbd "C-z"))
+
+
