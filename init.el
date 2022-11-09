@@ -27,6 +27,11 @@
 ;;  bundles and customization ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; fonts
+
+;;(set-default-font "m+2m")
+
+
 ;; languages
 (el-get-bundle apache-mode)
 (el-get-bundle crontab-mode)
@@ -61,11 +66,6 @@
 (autoload 'find-file-in-project "find-file-in-project" nil t)
 (global-set-key "\C-xf" 'find-file-in-project)
 (global-set-key "\C-xd" 'find-file-in-current-directory)
-
-;; edit text from chrome
-(el-get-bundle edit-server)
-(setq edit-server-host "127.0.0.1")
-(edit-server-start)
 
 ;; ido everywhere
 (el-get-bundle ido-ubiquitous)
@@ -109,9 +109,9 @@
 (el-get-bundle powerline)
 (powerline-default-theme)
 
-;; 80 columns limit
+;; 120 columns limit
 (el-get-bundle fill-column-indicator)
-(setq fci-rule-column 80)
+(setq fci-rule-column 120)
 
 ;; never kill emacs
 (global-set-key "\C-x\C-c" 'kill-this-buffer)
@@ -126,3 +126,15 @@
 (global-unset-key (kbd "C-z"))
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(compat csv-mode yaml-mode notmuch)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
